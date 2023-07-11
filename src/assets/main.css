@@ -1,0 +1,65 @@
+/* semantic color variables for this project */
+:root {
+  --color-bg: #131B29;
+  --color-text: #F0F4F8;
+  --color-table-header: #8698aa;
+  --color-buy-price: #00b15d;
+  --color-sell-price: #FF5B5A;
+  --bg-quote-hover: #1E3059;
+  --bg-buy-size-bar: rgba(16, 186, 104, 0.12);
+  --bg-sell-size-bar: rgba(255, 90, 90, 0.12);
+  --bg-flash-green: rgba(0, 177, 93, 0.5);
+  --bg-flash-red: rgba(255, 91, 90, 0.5);
+  --bg-last-price: rgba(134, 152, 170, 0.12);
+  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+}
+
+.text-right {
+  text-align: right;
+}
+.flash-red {
+  animation: flashRed 0.3s ease;
+}
+.flash-green {
+  animation: flashGreen 0.3s ease;
+}
+
+@keyframes flashRed {
+  0% {
+    background-color: var(--bg-flash-red);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes flashGreen {
+  0% {
+    background-color: var(--bg-flash-green);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
